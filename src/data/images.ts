@@ -42,15 +42,10 @@ export const photos = {
   'vr-bride-light': p('vr-bride-light', 30707329, 'portrait', 'Bride adjusting her maang tikka in soft golden backlight'),
   'vr-couple': p('vr-couple', 30707328, 'portrait', 'Bride and groom in red and ivory posing together against a jewelled wall'),
   'vr-bride-portrait': p('vr-bride-portrait', 30707327, 'portrait', 'Bride in a red bridal lehenga looking down, veil framing her face'),
-  'vr-seated': p('vr-seated', 30707333, 'portrait', 'Groom standing beside his seated bride in a lit corridor'),
   'vr-embrace': p('vr-embrace', 30707336, 'portrait', 'Groom drawing his bride close in front of a gilded backdrop'),
   'vr-bride-2': p('vr-bride-2', 30707330, 'landscape', 'Bride admiring her mehndi and bangles against deep blue stone'),
   'vr-bride-3': p('vr-bride-3', 30707335, 'portrait', 'Bride touching her earrings, head bowed under a red veil'),
 
-  // Bengali wedding
-  'bn-couple': p('bn-couple', 30171219, 'portrait', 'Bengali bride and groom in red and gold with jasmine garlands before a rose wall'),
-  'bn-couple-2': p('bn-couple-2', 30171220, 'portrait', 'Groom in a topor smiling beside his bride in a red Banarasi saree'),
-  'bn-bride-veil': p('bn-bride-veil', 30171229, 'landscape', 'Bengali bride raising her red veil above her head'),
 
   // Bridal & groom portraits
   'bride-gold': p('bride-gold', 5376556, 'portrait', 'Close portrait of a bride with nath, maang tikka and layered gold jewellery'),
@@ -58,19 +53,14 @@ export const photos = {
   'bride-palms-1': p('bride-palms-1', 27212064, 'portrait', 'Bride gazing down at her mehndi in a red and gold lehenga'),
   'bride-palms-2': p('bride-palms-2', 27212065, 'portrait', 'Bride standing among palm leaves in full bridal jewellery'),
   'bride-veil-pink': p('bride-veil-pink', 27212066, 'portrait', 'Bride beneath a sheer rose-pink veil'),
-  'bride-garden': p('bride-garden', 36762663, 'portrait', 'Bride with floral kaleere smiling softly in morning light'),
-  'bride-portrait': p('bride-portrait', 14819717, 'portrait', 'Bride in a gold-edged dupatta with a gentle smile'),
   'groom-sherwani': p('groom-sherwani', 11748430, 'portrait', 'Groom in an ivory sherwani and maroon stole before an antique tapestry'),
-  'groom-rajput': p('groom-rajput', 6458157, 'portrait', 'Groom in a black bandhgala and saffron safa holding a ceremonial sword'),
 
   // Engagements
   'eng-bokeh-1': p('eng-bokeh-1', 30289601, 'portrait', 'Engaged couple touching foreheads in front of golden bokeh lights'),
   'eng-bokeh-2': p('eng-bokeh-2', 30289596, 'portrait', 'Couple laughing together, festoon lights glowing behind them'),
   'eng-bokeh-3': p('eng-bokeh-3', 30289585, 'portrait', 'Bride-to-be in teal with her fiancé beneath warm string lights'),
-  'eng-bokeh-4': p('eng-bokeh-4', 30289610, 'portrait', 'Couple embracing against red and white lights at night'),
   'eng-ring': p('eng-ring', 14819859, 'landscape', 'Groom slipping an engagement ring onto a hennaed hand with red bangles'),
   'eng-hands': p('eng-hands', 18628263, 'landscape', 'Couple’s hands intertwined, her mehndi and chooda in soft focus'),
-  'eng-jeep': p('eng-jeep', 30289612, 'portrait', 'Couple posing beside a vintage jeep under a curtain of lights'),
 
   // Pre-wedding
   'pw-fort-1': p('pw-fort-1', 36967368, 'portrait', 'Couple with foreheads together in front of a pale sandstone monument'),
@@ -78,30 +68,41 @@ export const photos = {
   'pw-fort-2': p('pw-fort-2', 36967371, 'landscape', 'Couple in pastels beneath a Mughal dome on a hazy afternoon'),
   'pw-fort-3': p('pw-fort-3', 36967369, 'portrait', 'Couple standing on heritage steps in soft lilac tones'),
   'pw-embrace': p('pw-embrace', 36967370, 'portrait', 'Man holding his partner from behind in pastel outfits'),
-  'pw-red-beach': p('pw-red-beach', 20417055, 'landscape', 'Woman in a flowing red gown on a beach at sunset'),
-  'pw-garden': p('pw-garden', 32878576, 'landscape', 'Couple in a saree and suit posing in a leafy garden'),
   'pw-amer': p('pw-amer', 29231349, 'portrait', 'Couple embracing inside a carved arch at a Rajasthan fort'),
 
   // Couples
   'cp-garden-1': p('cp-garden-1', 19733687, 'portrait', 'Groom kissing his partner’s temple in a sunlit garden'),
-  'cp-garden-2': p('cp-garden-2', 19734103, 'portrait', 'Couple in sage green outfits posing by a brick wall'),
-  'cp-bw': p('cp-bw', 19734102, 'portrait', 'Black and white portrait of a couple smiling towards the camera'),
-  'cp-tree': p('cp-tree', 19734108, 'portrait', 'Couple leaning against a large tree, photographed in monochrome'),
   'cp-beach': p('cp-beach', 20417059, 'landscape', 'Newlyweds in wedding attire walking hand in hand along the beach'),
-  'cp-temple': p('cp-temple', 36762647, 'landscape', 'Couple standing before an illuminated temple gopuram at night'),
-  'cp-intimate': p('cp-intimate', 14819853, 'landscape', 'Bride leaning into her groom, eyes closed, in velvet and embroidered net'),
-  'cp-stage': p('cp-stage', 14819866, 'portrait', 'Couple slow dancing under blue stage lights'),
-  'cp-pink': p('cp-pink', 8621982, 'landscape', 'Groom in a turban bending to touch foreheads with his bride'),
 
   // Events & ceremonies
   'ev-haldi-petals': p('ev-haldi-petals', 33508493, 'portrait', 'Bride laughing as marigold petals shower down at her haldi'),
-  'ev-haldi-2': p('ev-haldi-2', 30705999, 'landscape', 'Bride with eyes closed as turmeric is applied at the haldi'),
-  'ev-haldi-3': p('ev-haldi-3', 30706032, 'landscape', 'Bride surrounded by friends in yellow at the haldi ceremony'),
   'ev-sangeet': p('ev-sangeet', 28589007, 'portrait', 'Couple dancing together at the sangeet beneath hanging florals'),
   'ev-mehndi': p('ev-mehndi', 28496968, 'landscape', 'Intricate bridal mehndi on hands resting on a yellow outfit'),
   'ev-mehndi-couple': p('ev-mehndi-couple', 27164132, 'landscape', 'Bride displaying her mehndi, red chooda and embroidered lehenga'),
-  'ev-henna': p('ev-henna', 16814609, 'portrait', 'Groom holding his bride’s hennaed hand'),
-  'ev-decor': p('ev-decor', 14819854, 'landscape', 'Reception hall draped in velvet with chandeliers of hanging flowers'),
+
+  // Premium upgrade (Pexels) — ceremonies, portraits, couples and details
+  'wd-temple': p('wd-temple', 33195531, 'portrait', 'Bride and groom in jasmine garlands seated together before a gilded temple shrine'),
+  'wd-garlands': p('wd-garlands', 6544197, 'portrait', 'Smiling bride and groom in varmala garlands against a wall of fresh flowers'),
+  'bride-red-veil': p('bride-red-veil', 31668770, 'portrait', 'Indian bride lifting a sheer red veil over her ivory lehenga in soft daylight'),
+  'bride-pearl': p('bride-pearl', 31668771, 'portrait', 'Editorial portrait of an Indian bride in pearl jewellery, touching her nath'),
+  'bride-emerald': p('bride-emerald', 11707056, 'portrait', 'Indian bride in an emerald and gold lehenga with a kundan necklace and nath'),
+  'bride-palace': p('bride-palace', 8186269, 'portrait', 'Indian bride in a red lehenga standing between carved wooden palace doors'),
+  'groom-arch': p('groom-arch', 20021569, 'landscape', 'Indian groom in an ivory sherwani and red safa framed by a sandstone arch'),
+  'cp-punjabi': p('cp-punjabi', 29192792, 'portrait', 'Punjabi couple touching foreheads under a flowing red dupatta'),
+  'cp-golden': p('cp-golden', 35625250, 'portrait', 'Groom kissing his bride’s forehead in misty golden morning light'),
+  'cp-doorway': p('cp-doorway', 29192796, 'portrait', 'Sikh groom kissing his bride’s hand in a painted heritage doorway'),
+  'cp-veil': p('cp-veil', 31668773, 'portrait', 'Bride and groom touching foreheads beneath her red wedding veil'),
+  'cp-garden-kiss': p('cp-garden-kiss', 30155180, 'landscape', 'Couple embracing in a lush garden setting with warm evening light'),
+  'cp-taj': p('cp-taj', 18286445, 'portrait', 'Couple walking hand in hand along the reflecting pool towards the misty Taj Mahal'),
+  'cp-arch-sunset': p('cp-arch-sunset', 31771913, 'landscape', 'Couple holding hands inside a stone archway as the sun sets behind them'),
+  'eng-garden': p('eng-garden', 30155179, 'portrait', 'Engaged couple embracing and smiling in front of a floral arch'),
+  'eng-rings': p('eng-rings', 31965606, 'landscape', 'Couple exchanging gold rings, the bride’s hands covered in mehndi and bangles'),
+  'ev-baraat': p('ev-baraat', 20021574, 'landscape', 'Groom arriving in the baraat under festive umbrellas at night'),
+  'ev-ritual': p('ev-ritual', 7245040, 'portrait', 'Hands pouring a brass kalash over rice during a Hindu wedding ritual'),
+  'ev-mehndi-night': p('ev-mehndi-night', 7686122, 'portrait', 'Bride and friends laughing together by candlelight on the mehndi evening'),
+  'ev-juttis': p('ev-juttis', 27164016, 'landscape', 'Groom’s embroidered juttis laid beside his ivory sherwani'),
+  'pw-lake': p('pw-lake', 31771914, 'portrait', 'Couple laughing together on the rocks beside a green lake'),
+  'pw-river': p('pw-river', 32792634, 'landscape', 'Couple embracing by the river at golden hour'),
 
   // Details & studio
   'rings-box': p('rings-box', 11473459, 'landscape', 'Pair of gold wedding bands in a red velvet ring box'),

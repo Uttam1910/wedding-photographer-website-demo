@@ -15,8 +15,8 @@ const photographerConfig = {
   whatsapp: '910000000000',
   whatsappMessage: 'Hi lens & love! I would like to check availability for my wedding.',
 
-  instagram: 'https://instagram.com/lensandlove',
-  instagramHandle: '@lensandlove',
+  instagram: 'https://instagram.com/',
+  instagramHandle: '#',
   youtube: 'https://youtube.com/',
   facebook: 'https://facebook.com/',
 

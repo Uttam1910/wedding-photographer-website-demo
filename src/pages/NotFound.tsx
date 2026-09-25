@@ -13,7 +13,7 @@ export default function NotFound() {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-night text-white">
       <div className="absolute inset-0 opacity-45">
-        <Img photo="cp-intimate" sizes="100vw" priority />
+        <Img photo="cp-veil" sizes="100vw" priority />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-night via-night/80 to-night/30" />
       <div className="relative mx-auto w-full max-w-[1440px] px-5 py-32 sm:px-8 lg:px-12">

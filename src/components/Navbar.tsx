@@ -16,11 +16,26 @@ function useScrollSpy(enabled: boolean) {
     const ids = navItems.map((n) => n.id)
     const onScroll = () => {
       const probe = window.innerHeight * 0.35
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4
+      // Nav order differs from page order, so pick by position: the passed section nearest the probe line
+      // (or the lowest section on the page once the bottom is reached).
       let current = 'top'
+      let best = -Infinity
+      const tops: Record<string, number> = {}
       for (const id of ids) {
         const el = document.getElementById(id)
-        if (el && el.getBoundingClientRect().top - probe <= 0) current = id
+        if (!el) continue
+        const top = el.getBoundingClientRect().top
+        tops[id] = top
+        if ((atBottom || top - probe <= 0) && top > best) {
+          best = top
+          current = id
+        }
       }
+      // Sections laid out side by side (About | Packages on wide screens) share a row:
+      // if the one the visitor just navigated to is level with the winner, highlight it.
+      const hashed = window.location.hash.slice(1)
+      if (hashed in tops && hashed !== current && Math.abs(tops[hashed] - best) < 48) current = hashed
       setActive(current)
     }
     onScroll()
