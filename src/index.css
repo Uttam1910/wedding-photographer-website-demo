@@ -1,0 +1,205 @@
+@import 'tailwindcss';
+
+/* Brand palette — defaults mirror src/config/photographer.ts, which overrides them at startup. */
+:root {
+  --brand-ivory: #f6f1ea;
+  --brand-sand: #ede4d6;
+  --brand-ink: #1d1915;
+  --brand-night: #15110d;
+  --brand-gold: #c3a06a;
+  --brand-gold-deep: #9c7a45;
+  --brand-brown: #5b4632;
+  --brand-muted: #766a5d;
+  --brand-line: #ddd1bf;
+}
+
+@theme inline {
+  --color-ivory: var(--brand-ivory);
+  --color-sand: var(--brand-sand);
+  --color-ink: var(--brand-ink);
+  --color-night: var(--brand-night);
+  --color-gold: var(--brand-gold);
+  --color-gold-deep: var(--brand-gold-deep);
+  --color-brown: var(--brand-brown);
+  --color-muted: var(--brand-muted);
+  --color-line: var(--brand-line);
+
+  --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-sans: 'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-script: 'Homemade Apple', 'Brush Script MT', cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-ivory font-sans text-ink antialiased;
+    font-weight: 400;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--brand-gold) 35%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand-gold);
+    outline-offset: 3px;
+  }
+  button {
+    cursor: pointer;
+  }
+  img {
+    user-select: none;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-sans text-[11px] font-medium tracking-[0.28em] uppercase;
+  }
+  .display {
+    @apply font-serif leading-[0.98] font-medium;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 px-6 text-[13px] font-medium tracking-[0.06em] transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-gold {
+    @apply bg-gold text-night hover:bg-[#d4b580];
+  }
+  .btn-outline-light {
+    @apply border border-white/70 text-white hover:border-white hover:bg-white hover:text-night;
+  }
+  .btn-outline-dark {
+    @apply border border-ink/70 text-ink hover:bg-ink hover:text-ivory;
+  }
+  .link-arrow {
+    @apply inline-flex items-center gap-2 text-[13px] font-medium tracking-[0.04em] underline-offset-4 hover:underline;
+  }
+  .field {
+    @apply block w-full rounded-none border border-line bg-white/80 px-3.5 py-3 text-[14px] text-ink placeholder:text-muted/70 transition-colors outline-none focus:border-gold-deep focus:bg-white;
+  }
+  .field-error {
+    @apply border-[#b2543f] focus:border-[#b2543f];
+  }
+  .demo-tag {
+    @apply inline-flex items-center gap-1 border border-current px-1.5 py-0.5 text-[10px] tracking-[0.14em] uppercase opacity-80;
+  }
+}
+
+/* Image hover zoom used by gallery tiles and cards */
+.zoom-img {
+  transition: transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.group:hover .zoom-img,
+.group:focus-visible .zoom-img {
+  transform: scale(1.045);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 900ms ease,
+    transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero slide cross-fade with a gentle Ken Burns drift */
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1400ms ease;
+}
+.hero-slide.is-active {
+  opacity: 1;
+}
+.hero-slide img {
+  transform: scale(1.06);
+  transition: transform 8000ms linear;
+}
+.hero-slide.is-active img {
+  transform: scale(1);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes film-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 400ms ease both;
+}
+.animate-rise-in {
+  animation: rise-in 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-slide img,
+  .hero-slide.is-active img {
+    transform: none;
+  }
+}
+
+/* Editorial gallery: rows derive from column width so portraits (1×2) land near 2:3 and landscapes near 4:3. */
+.gallery-grid {
+  --cols: 2;
+  --gap: 0.5rem;
+  grid-auto-rows: calc((100cqw - (var(--cols) - 1) * var(--gap)) / var(--cols) * 0.72);
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    --cols: 3;
+    --gap: 0.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .gallery-grid {
+    --cols: 4;
+  }
+}
